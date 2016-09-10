@@ -25,22 +25,22 @@
 	</head>
     {% endblock %}
 {% block body %}
-    <div class="row" style="height: 800px;">
+    <div class="row" style="height: 600px;">
         <div class="col-md-4">
             <form method="POST" action="{% url "account_login" %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %} style="margin-top: 100px;">
-                <legend>{% trans "Log in to an existing account" %}</legend>
+                <legend>{% trans "" %}</legend>
                 {% csrf_token %}
                 {{ form|bootstrap }}
                 {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
                 <button type="submit" class="button">{% trans "Log in" %}</button>
-                <a href="{% url "account_password_reset" %}" class="btn btn-link">{% trans "Forgot your password?" %}</a>
+                <a href="{% url "account_password_reset" %}" class="btn btn-link">{% trans "Esqueceu sua senha?" %}</a>
             </form>
             {% if ACCOUNT_OPEN_SIGNUP %}
                 <p class="login-signup">
                     <small>
-                        {% trans "Don't have an account?" %}  <strong><a href="{% urlnext 'account_signup' %}">{% trans "Sign up" %}</a></strong>
+                        {% trans "Ainda não possui uma conta?" %}  <strong><a href="{% urlnext 'account_signup' %}">{% trans "Cadastre-se" %}</a></strong>
                     </small>
                 </p>
             {% endif %}
