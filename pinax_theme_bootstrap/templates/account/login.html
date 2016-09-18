@@ -25,7 +25,7 @@
 	</head>
     {% endblock %}
 {% block body %}
-    <div class="row" style="height: 600px;">
+    <div class="row" style="height: 500%; width: 25%;">
         <div class="col-md-4">
             <form method="POST" action="{% url "account_login" %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %} style="margin-top: 100px;">
                 <legend>{% trans "" %}</legend>
@@ -34,7 +34,7 @@
                 {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button type="submit" class="button">{% trans "Log in" %}</button>
+                <button type="submit" class="button" style="font-weight: bold;">{% trans "Log in" %}</button>
                 <a href="{% url "account_password_reset" %}" class="btn btn-link">{% trans "Esqueceu sua senha?" %}</a>
             </form>
             {% if ACCOUNT_OPEN_SIGNUP %}
