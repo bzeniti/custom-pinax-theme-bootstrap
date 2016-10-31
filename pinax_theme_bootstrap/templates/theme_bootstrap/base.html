@@ -67,11 +67,11 @@
 					</ul>
 				</div>
 				<div class="top-bar-right">
-<!--					<div class="search">
+					<div class="search">
 						Pesquisa de empresa
 						<input type="text" name="search-field" />
 					</div>
--->
+<!--
 <div class="search">
     Pesquisa de empresa
     <div class="typeahead__container" >
@@ -81,17 +81,18 @@
                 <input class="js-typeahead-input" id="busca" name="query" type="search" placeholder="Busca empresa" autocomplete="off" style="width: 200px; font-family: arial;"/>
             </span>
 
-<!--            <span class="typeahead__button">
+            <span class="typeahead__button">
                 <button type="submit">
                  <i class="typeahead__search-icon"></i> 
                 </button>
             </span>
--->
+
 
         </div>
     </div>
 	<button type="submit" onclick="goToURL(); return false;" style="position: relative; z-index: 10000; top: 0px; left: -60px; "><img src='{% static "assets/img/ico-search.png" %}'></button> 
 </div>
+-->
 					<div class="login">
 						<!-- <a href="#">Log in</a> ou <a href="#">Cadastre-se</a> -->
 						{% block account_bar %}{% include "_account_bar.html" %}{% endblock %}
