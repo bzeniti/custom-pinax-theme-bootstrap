@@ -60,10 +60,12 @@
 					</ul>
 				</div>
 				<div class="top-bar-right">
-					<div class="search">
-						Pesquisa de empresa
-						<input type="text" name="search-field" />
-					</div>
+   <div class="easy-autocomplete" style="width: 230px !important;">
+        <input placeholder="Digite a Empresa ou Ticker" class="form-control" id="template-links2" autocomplete="off" style="width: 230px !important;">
+         <div class="easy-autocomplete-container" id="eac-container-template-links2" style="width: 230px !important;">
+		    <ul style="display: none;"></ul>
+         </div>
+   </div>
 					<div class="login">
 						<a href="http://teste.rebyu.io/account/login/">Log in</a> ou <a href="http://teste.rebyu.io/account/signup/">Cadastre-se</a>
 					</div>
@@ -98,23 +100,16 @@
 					<div class="info float-right">
 <div class="search">
     Pesquisa de empresa
-    <div class="typeahead__container" >
-        <div class="typeahead__field" style="width: 250px; font-family: arial;">
- 
-            <span class="typeahead__query" >
-                <input class="js-typeahead-input" id="busca" name="query" type="search" placeholder="Busca empresa" autocomplete="off" style="width: 200px; font-family: arial;"/>
-            </span>
+   
+   <div class="easy-autocomplete" style="width: 230px !important;">
+        <input placeholder="Digite a Empresa ou Ticker" class="form-control" id="template-links" autocomplete="off" style="width: 230px !important;">
+         <div class="easy-autocomplete-container" id="eac-container-template-links" style="width: 230px !important;">
+		    <ul style="display: none;"></ul>
+         </div>
+   </div>
 
-<!--            <span class="typeahead__button">
-                <button type="submit">
-                 <i class="typeahead__search-icon"></i> 
-                </button>
-            </span>
--->
-
-        </div>
-    </div>
-	<button type="submit" onclick="goToURL(); return false;" style="position: relative; z-index: 10000; top: 0px; left: -60px; "><img src='{% static "assets/img/ico-search.png" %}'></button> 
+   
+	<button type="submit" onclick="goToURL(); return false;" style="position: relative; z-index: 10000; top: 0px; left: -10px; "><img src='{% static "assets/img/ico-search.png" %}'></button> 
 </div>
 	
 <!--
